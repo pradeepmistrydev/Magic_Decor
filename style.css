@@ -1,0 +1,537 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #fff;
+    --black: #000;
+    --blue: #005af9;
+    --red: #9f1127;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: "Jost";
+    src: url("fonts/Jost-Regular.ttf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Jost";
+    src: url("fonts/Jost-Italic.ttf");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Jost";
+    src: url("fonts/Jost-SemiBold.ttf");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Jost";
+    src: url("fonts/Jost-SemiBoldItalic.ttf");
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Jost";
+    src: url("fonts/Jost-Bold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Jost";
+    src: url("fonts/Jost-BoldItalic.ttf");
+    font-weight: bold;
+    font-style: italic;
+}
+
+body {
+    font-family: "Jost";
+    font-weight: 400;
+    color: var(--black);
+
+}
+
+.navbar_logo {
+    width: 250px;
+}
+
+nav.navbar {
+    padding-top: 15px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 20px;
+    color: var(--black);
+    margin: 0 16px;
+}
+
+.custom-toggler.navbar-toggler {
+    border-color: lightgreen;
+}
+
+.banner_content img {
+    height: calc(100vh - 80px);
+    width: 100%;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    filter: brightness(0.4);
+}
+
+.slider {
+    position: relative;
+    z-index: 3;
+}
+
+.banner_carousel .owl-nav {
+    color: var(--white);
+    font-size: 46px;
+}
+
+.banner_carousel .owl-prev,
+.banner_carousel .owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    outline: 0;
+}
+
+.banner_carousel .owl-prev {
+    left: 30px;
+}
+
+.banner_carousel .owl-next {
+    right: 30px;
+}
+
+.banner_text {
+    position: absolute;
+    top: 30%;
+    right: 30%;
+}
+
+.banner_text h2 {
+    font-size: 45px;
+    color: var(--white);
+    font-weight: bold;
+}
+
+.banner_text p.subtext {
+    font-size: 24px;
+    color: var(--white);
+    margin-bottom: 0;
+}
+
+.banner_text p {
+    font-size: 20px;
+    color: var(--white);
+    margin-top: 7px;
+}
+
+.banner_text button {
+    padding: 7px 20px;
+    border-radius: 7px;
+    background: var(--red);
+    color: var(--white);
+    border: 0;
+    font-size: 16px;
+    cursor: pointer;
+    outline: 0;
+}
+
+.products {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.products::before {
+    content: '';
+    position: absolute;
+    background: var(--red);
+    height: 300px;
+    width: 100%;
+    z-index: -1;
+}
+
+.product_heading h2 {
+    font-size: 35px;
+    color: var(--white);
+}
+
+.product_heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.product_heading p {
+    color: var(--white);
+}
+
+.product_row {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.product_item {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.product_item .card_img {
+    width: 300px;
+    height: 173px;
+    object-fit: cover;
+}
+
+.product_details {
+    padding: 13px 24px;
+}
+
+.b-w {
+    filter: brightness(0.1);
+}
+
+.product_details h3 {
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+.product_details p {
+    margin: 7px 0;
+}
+
+.star_rating i {
+    color: #ffda10;
+}
+
+.btn_product {
+    border: 1px solid var(--red);
+    color: var(--red);
+    font-size: 16px;
+    padding: 7px 20px;
+    border-radius: 7px;
+    background: transparent;
+    margin-top: 15px;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+}
+
+.btn_product:hover {
+    background: var(--red);
+    color: var(--white);
+}
+
+section#review {
+    padding-top: 30px;
+}
+
+.testimonials_heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonials_heading h2 {
+    font-size: 35px;
+}
+
+.testimonials_heading h2 {
+    font-size: 35px;
+    font-weight: 600;
+    position: relative;
+    width: max-content;
+}
+
+.testimonials_heading h2::before {
+    position: absolute;
+    content: "";
+    background: var(--red);
+    height: 3px;
+    width: 100px;
+    bottom: -7px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.testimonials_heading p {
+    font-size: 18px;
+    color: var(--red);
+    margin-bottom: 0;
+}
+
+.testimonial_card {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 10px;
+    border-radius: 7px;
+    margin: 23px 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonial_card .profile_details .testimonial_img {
+    width: 30px;
+}
+
+.testimonial_carousel {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.quote {
+    z-index: 1;
+    color: var(--white);
+}
+
+.quote::before {
+    content: "";
+    background-color: var(--red);
+    border-radius: 50%;
+    position: absolute;
+    top: -31px;
+    left: -48px;
+    z-index: -1;
+    height: 120px;
+    width: 96px;
+    transform: rotate(-136deg);
+}
+
+.owl-carousel .owl-item .quote img {
+    width: 27px;
+    filter: invert(1);
+    margin-top: 9px;
+}
+
+
+.card_content {
+    margin-top: 35px;
+    margin-left: 25px;
+}
+
+.testimonial_card .profile_details .testimonial_img {
+    width: 40px;
+}
+
+.profile_details h5 {
+    font-size: 20px;
+    margin-top: 8px;
+    margin-bottom: 1px;
+    font-weight: 600;
+}
+
+.testimonial_carousel {
+    position: relative;
+}
+
+.testimonial_carousel .owl-nav {
+    color: var(--white);
+    font-size: 46px;
+}
+
+.testimonial_carousel .owl-prev,
+.testimonial_carousel .owl-next {
+    position: absolute;
+    top: 140px;
+    height: 84px;
+    outline: 0;
+    background: var(--red) !important;
+}
+
+.testimonial_carousel .owl-prev {
+    left: 30px;
+}
+
+.testimonial_carousel .owl-next {
+    right: 30px;
+}
+
+.transition {
+    background: #f2f2f2;
+    padding-bottom: 40px;
+}
+
+.transition .product_heading h2 {
+    color: var(--red);
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.transition .product_heading p {
+    color: var(--black);
+}
+
+.transition_main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.twentytwenty-wrapper.twentytwenty-horizontal {
+    margin: 40px;
+    margin-bottom: 0;
+}
+
+.contactus {
+    background: #f2f2f2;
+}
+
+.contactus .product_heading h2 {
+    color: var(--red);
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.contactus .product_heading {
+    padding-top: 0;
+}
+
+.contactus p {
+    text-align: center;
+    margin-bottom: 0;
+    padding-top: 20px;
+    font-size: 22px;
+}
+
+.contactus p a {
+    text-decoration: underline;
+    color: var(--red);
+    font-size: 22px;
+}
+
+.contactus {
+    background: var(--white);
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.contactus p i {
+    font-size: 18px;
+    color: gray;
+    margin-right: 6px;
+}
+
+.topscroll {
+    background: var(--red);
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 600;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: fixed;
+    border: 0;
+    z-index: 2;
+    bottom: 10px;
+    right: 10px;
+    outline: 0;
+    cursor: pointer;
+}
+
+footer {
+    background: gray;
+}
+
+footer p {
+    text-align: center;
+    margin-bottom: 0;
+    padding: 10px;
+    color: var(--white);
+}
+
+i.fas.fa-phone {
+    transform: rotate(90deg);
+}
+
+footer p span {
+    color: var(--red);
+    font-weight: 600;
+}
+
+.navbar-light .navbar-nav .active .nav-link {
+    color: var(--red);
+    font-weight: 600;
+}
+
+/* responsive */
+
+@media(max-width:768px) {
+
+    .banner_text h2 {
+        font-size: 30px;
+    }
+
+    .banner_text p.subtext {
+        font-size: 22px;
+    }
+
+    .banner_text {
+        left: 50%;
+        right: unset;
+        transform: translateX(-50%);
+    }
+
+    .product_heading h2 {
+        font-size: 27px;
+    }
+
+    .product_heading p {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .product_details h3 {
+        font-size: 22px;
+    }
+
+    .testimonials_heading h2 {
+        font-size: 27px;
+    }
+
+    .product_row {
+        gap: 28px;
+    }
+
+    .contactus p {
+        font-size: 18px;
+    }
+
+    .contactus p a {
+        font-size: 20px;
+    }
+
+    .navbar_logo {
+        width: 185px;
+    }
+
+    .navbar-toggler-icon {
+        width: 1em;
+        height: 1em;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 18px;
+    }
+
+    .navbar-collapse {
+        margin-top: 10px;
+    }
+
+
+}
+
+/* responsive */
