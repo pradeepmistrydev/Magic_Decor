@@ -29,12 +29,15 @@ $('.banner_carousel').owlCarousel({
 
 // owlCarousel testimonial slider
 
+
+var owl = $('.owl-carousel');
+
 $('.testimonial_carousel').owlCarousel({
     loop: true,
     margin: 10,
     nav: true,
     dots: false,
-    autoplay: true,
+    autoplay: false,
     responsiveClass: true,
     responsive: {
         0: {
@@ -52,7 +55,6 @@ $('.testimonial_carousel').owlCarousel({
         }
     }
 })
-
 // owlCarousel testimonial slider
 
 //transition
