@@ -388,6 +388,19 @@ section#review {
 
 .contactus {
     background: #f2f2f2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.aboutus {
+    flex-basis: 40%;
+}
+
+
+
+.contact {
+    flex-basis: 40%;
 }
 
 .contactus .product_heading h2 {
@@ -405,6 +418,10 @@ section#review {
     margin-bottom: 0;
     padding-top: 20px;
     font-size: 22px;
+}
+
+.aboutus p {
+    font-size: 20px;
 }
 
 .contactus p a {
@@ -468,6 +485,18 @@ footer p span {
 }
 
 /* responsive */
+
+@media(max-width:992px) {
+    .aboutus {
+        flex-basis: 100%;
+    }
+
+    .contact {
+        flex-basis: 100%;
+        margin-top: 25px;
+    }
+}
+
 
 @media(max-width:768px) {
 
