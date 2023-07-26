@@ -66,12 +66,15 @@ $(function () {
 //transition
 
 //nav active
+
 $(document).on('click', '.nav-item a', function (e) {
     $(this).parent().addClass('active').siblings().removeClass('active');
 });
+
 //nav active
 
-//scroll btn 
+//scroll btn
+
 $('.topscroll').hide();
 $(window).scroll(function () {
     $('.topscroll').show();
@@ -80,4 +83,5 @@ $(window).scroll(function () {
 function scrollToTop() {
     $(window).scrollTop(0);
 }
+
 //scroll btn 
